@@ -1,0 +1,13 @@
+Nota de los potenciadores:
+
+	- Pollo: Agrega 1 vida.
+	- Vial: Agrega velocidad de movimiento.
+	- Pluma: Permite al actor ejecutar 3 dobles saltos.
+	- Capa: Proporciona invisibilidad por 10 segundos.
+
+Probabilidad calculada cada 360 frames o 6 segundos.
+
+Reaparición de potenciadores fijos:
+	- Pollo: 100 segundos = 6000 frames.
+	- Pluma: 50 segundos = 3000 frames.
+	- Vial: 100 segundos = 6000 frames.
