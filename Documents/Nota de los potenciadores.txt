@@ -1,9 +1,21 @@
 Nota de los potenciadores:
 
 	- Pollo: Agrega 1 vida.
-	- Vial: Agrega velocidad de movimiento.
-	- Pluma: Permite al actor ejecutar 3 dobles saltos.
-	- Capa: Proporciona invisibilidad por 10 segundos.
+		* 1 fijo
+		* 1 al azar
+		* Probabilidad del 5% de aparecer.
+	- Vial: Agrega velocidad de movimiento (25% más).
+		* 1 fijo
+		* 1 al azar
+		* Probabilidad del 5% de aparecer.
+	- Pluma: Permite al actor ejecutar 3 dobles saltos. *
+		* 2 fijos
+		* 2 al azar
+		* Probabilidad del 10% de aparecer.
+	- Capa: Proporciona invisibilidad por 10 segundos. *
+		* 0 fijos.
+		* 1 al azar
+		* Probabilidad del 1% de aparecer.
 
 Probabilidad calculada cada 360 frames o 6 segundos.
 
@@ -11,3 +23,9 @@ Reaparición de potenciadores fijos:
 	- Pollo: 100 segundos = 6000 frames.
 	- Pluma: 50 segundos = 3000 frames.
 	- Vial: 100 segundos = 6000 frames.
+
+Items para el ritual:
+	- Biblia [4 lugares posibles] *
+	- Cruz [1 lugar fijo] *
+	- Rosario [4 lugares posibles] *
+	- Agua bendita [4 lugares posibles] *
