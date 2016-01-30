@@ -8,11 +8,11 @@ Nota de los potenciadores:
 		* 1 fijo
 		* 1 al azar
 		* Probabilidad del 5% de aparecer.
-	- Pluma: Permite al actor ejecutar 3 dobles saltos. *
+	- Pluma: Permite al actor ejecutar 3 dobles saltos.
 		* 2 fijos
 		* 2 al azar
 		* Probabilidad del 10% de aparecer.
-	- Capa: Proporciona invisibilidad por 10 segundos. *
+	- Capa: Proporciona invisibilidad por 10 segundos.
 		* 0 fijos.
 		* 1 al azar
 		* Probabilidad del 1% de aparecer.
@@ -25,7 +25,7 @@ Reaparición de potenciadores fijos:
 	- Vial: 100 segundos = 6000 frames.
 
 Items para el ritual:
-	- Biblia [4 lugares posibles] *
-	- Cruz [1 lugar fijo] *
-	- Rosario [4 lugares posibles] *
-	- Agua bendita [4 lugares posibles] *
+	- Biblia [4 lugares posibles]
+	- Cruz [1 lugar fijo]
+	- Rosario [4 lugares posibles]
+	- Agua bendita [4 lugares posibles]
