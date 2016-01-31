@@ -303,6 +303,11 @@ public class ControlLevel : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
+		//Se inicializa a cero al momento de iniciar la ejecución de la escena.
+		polloVariable = 0;
+		botaVariable = 0;
+		vialVariable = 0;
+		capaVariable = 0;
 		posicionarItemsRitual();
 		posicionarItemsPotenciadores();
 	}
@@ -328,19 +333,47 @@ public class ControlLevel : MonoBehaviour
 			if(random >= 0 && random <5)
 			{
 				//Pocion
+				//vialVariable = 0;
 			}
 			if(random >= 25 && random <30)
 			{
 				//Pollo
+				//polloVariable = 0;
 			}
 			if(random >= 75 && random <85)
 			{
 				//Bota
+				//botaVariable = 0;
 			}
 			if(random == 99)
 			{
 				//Capa
+				//capaVariable = 0;
 			}
 		}
+	}
+
+	public void disminuyeBota()
+	{
+		Debug.Log("Disminute bota: " + botaVariable);
+		botaVariable = botaVariable - 1;
+	}
+
+	public void disminuyePollo()
+	{
+		Debug.Log("Disminute Pollo: "+ polloVariable);
+		polloVariable = polloVariable - 1;
+	}
+
+	public void disminuyeVial()
+	{
+		Debug.Log("Disminute Vial " + vialVariable);
+		vialVariable = vialVariable - 1;
+	}
+
+	public void disminuyeCapa()
+	{
+		Debug.Log("Disminute capa "+capaVariable);
+		capaVariable = capaVariable - 1;
 	}
 }
