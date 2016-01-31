@@ -38,6 +38,7 @@ public class ControlLevel : MonoBehaviour
 				if(posicionesAguaBendita[0] != null)
 				{
 					Instantiate(aguaBendita,posicionesAguaBendita[0].transform.position, Quaternion.identity);
+					posicionesAguaBendita[0].GetComponent<ControlPosicion>().setOcupado(true);
 				}
 			} 
 			else 
@@ -63,6 +64,7 @@ public class ControlLevel : MonoBehaviour
 						if(posicionesAguaBendita[random] != null) 
 						{
 							Instantiate(aguaBendita,posicionesAguaBendita[random].transform.position, Quaternion.identity);
+							posicionesAguaBendita[random].GetComponent<ControlPosicion>().setOcupado(true);
 							existe = true;
 						}
 					}
@@ -78,6 +80,7 @@ public class ControlLevel : MonoBehaviour
 				if(posicionesBiblia[0] != null)
 				{
 					Instantiate(biblia,posicionesBiblia[0].transform.position, Quaternion.identity);
+					posicionesBiblia[0].GetComponent<ControlPosicion>().setOcupado(true);
 				}
 			} 
 			else 
@@ -103,6 +106,7 @@ public class ControlLevel : MonoBehaviour
 						if(posicionesBiblia[random] != null) 
 						{
 							Instantiate(biblia,posicionesBiblia[random].transform.position, Quaternion.identity);
+							posicionesBiblia[random].GetComponent<ControlPosicion>().setOcupado(true);
 							existe = true;
 						}
 					}
@@ -118,6 +122,7 @@ public class ControlLevel : MonoBehaviour
 				if(posicionesCruz[0] != null)
 				{
 					Instantiate(cruz,posicionesCruz[0].transform.position, Quaternion.identity);
+					posicionesCruz[0].GetComponent<ControlPosicion>().setOcupado(true);
 				}
 			} 
 			else 
@@ -143,6 +148,7 @@ public class ControlLevel : MonoBehaviour
 						if(posicionesCruz[random] != null) 
 						{
 							Instantiate(cruz,posicionesCruz[random].transform.position, Quaternion.identity);
+							posicionesCruz[random].GetComponent<ControlPosicion>().setOcupado(true);
 							existe = true;
 						}
 					}
@@ -158,6 +164,7 @@ public class ControlLevel : MonoBehaviour
 				if(posicionesCruz[0] != null)
 				{
 					Instantiate(rosario,posicionesRosario[0].transform.position, Quaternion.identity);
+					posicionesRosario[0].GetComponent<ControlPosicion>().setOcupado(true);
 				}
 			} 
 			else 
@@ -183,6 +190,7 @@ public class ControlLevel : MonoBehaviour
 						if(posicionesCruz[random] != null) 
 						{
 							Instantiate(rosario,posicionesRosario[random].transform.position, Quaternion.identity);
+							posicionesRosario[random].GetComponent<ControlPosicion>().setOcupado(true);
 							existe = true;
 						}
 					}
@@ -245,6 +253,7 @@ public class ControlLevel : MonoBehaviour
 				if(posicionesPollo[contador] != null) 
 				{
 					Instantiate(pollo,posicionesPollo[contador].transform.position, Quaternion.identity);
+					posicionesPollo[contador].GetComponent<ControlPosicion>().setOcupado(true);
 					polloVariable++;
 				}
 				contador++;
@@ -269,6 +278,7 @@ public class ControlLevel : MonoBehaviour
 				if(posicionesBota[contador] != null) 
 				{
 					Instantiate(bota,posicionesBota[contador].transform.position, Quaternion.identity);
+					posicionesBota[contador].GetComponent<ControlPosicion>().setOcupado(true);
 					botaVariable++;
 				}
 				contador++;
@@ -293,6 +303,7 @@ public class ControlLevel : MonoBehaviour
 				if(posicionesVial[contador] != null) 
 				{
 					Instantiate(vial,posicionesVial[contador].transform.position, Quaternion.identity);
+					posicionesVial[contador].GetComponent<ControlPosicion>().setOcupado(true);
 					vialVariable++;
 				}
 				contador++;
@@ -315,7 +326,7 @@ public class ControlLevel : MonoBehaviour
 	//Item capa
 	public GameObject capa;
 	public GameObject[] posicionesCapa;
-	public int maxCapaVariable = 1;
+	public int maxCapa = 1;
 
 	//Contador de tiempo
 	private int tiempoBase;
@@ -336,22 +347,51 @@ public class ControlLevel : MonoBehaviour
 				//vialVariable = 0;
 				if(this.vialVariable < this.maxVial)
 				{
+					Debug.Log("Aun hay espacio Vial");
+
+					for(int i = 0; i < posicionesVial.Length; i++) 
+					{
+					}
 				}
 			}
 			if(random >= 25 && random <30)
 			{
 				//Pollo
 				//polloVariable = 0;
+				if(this.polloVariable < this.maxPollo)
+				{
+					Debug.Log("Aun hay espacio Pollo");
+
+					for(int i = 0; i < posicionesPollo.Length; i++) 
+					{
+					}
+				}
 			}
 			if(random >= 75 && random <85)
 			{
 				//Bota
 				//botaVariable = 0;
+				if(this.botaVariable < this.maxBota)
+				{
+					Debug.Log("Aun hay espacio Bota");
+
+					for(int i = 0; i < posicionesBota.Length; i++) 
+					{
+					}
+				}
 			}
 			if(random == 99)
 			{
 				//Capa
 				//capaVariable = 0;
+				if(this.capaVariable < this.maxCapa)
+				{
+					Debug.Log("Aun hay espacio");
+
+					for(int i = 0; i < posicionesCapa.Length; i++) 
+					{
+					}
+				}
 			}
 		}
 	}
