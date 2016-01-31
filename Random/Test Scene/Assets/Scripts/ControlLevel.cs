@@ -196,31 +196,34 @@ public class ControlLevel : MonoBehaviour
 	 * Items potenciadores:
 	 * - Capa
 	 * - Pollo
-	 * - Pluma
+	 * - Bota
 	 * - Vial
 	 */
 
 	//Item pollo
 	public GameObject pollo;
 	public GameObject[] posicionesPollo;
+	public int maxPolloVariable = 1;
 	public int maxPolloFijo = 1;
 
-	//Item pluma
-	public GameObject pluma;
-	public GameObject[] posicionesPluma;
-	public int maxPlumaFijo = 2;
+	//Item Bota
+	public GameObject bota;
+	public GameObject[] posicionesBota;
+	public int maxBotaVariable = 1;
+	public int maxBotaFijo = 2;
 
 	//Item vial
 	public GameObject vial;
 	public GameObject[] posicionesVial;
+	public int maxVialVariable = 1;
 	public int maxVialFijo = 1;
 
 	//Contadores
 	private int polloFijo = 0;
-	private int plumaFijo = 0;
+	private int botaFijo = 0;
 	private int vialFijo = 0;
 	private int polloVariable = 0;
-	private int plumaVariable = 0;
+	private int botaVariable = 0;
 	private int vialVariable = 0;
 	private int capaVariable = 0;
 
@@ -243,15 +246,15 @@ public class ControlLevel : MonoBehaviour
 		}
 
 		contador = 0;
-		//Item pluma
-		if(pluma != null && posicionesPluma.Length>0)
+		//Item bota
+		if(bota != null && posicionesBota.Length>0)
 		{
-			while(contador < posicionesPluma.Length && plumaFijo < maxPlumaFijo)
+			while(contador < posicionesBota.Length && botaFijo < maxBotaFijo)
 			{
-				if(posicionesPluma[contador] != null)
+				if(posicionesBota[contador] != null)
 				{
-					Instantiate(pluma,posicionesPluma[contador].transform.position, Quaternion.identity);
-					plumaFijo++;
+					Instantiate(bota,posicionesBota[contador].transform.position, Quaternion.identity);
+					botaFijo++;
 				}
 				contador++;
 			}
@@ -285,11 +288,6 @@ public class ControlLevel : MonoBehaviour
 	public GameObject[] posicionesCapa;
 	public int maxCapaVariable = 1;
 
-	//Items con aparte elementos variables
-	public int maxPolloVariable = 1;
-	public int maxPlumaVariable = 1;
-	public int maxVialVariable = 1;
-
 	//Contador de tiempo
 	private int tiempoBase;
 	
@@ -305,7 +303,7 @@ public class ControlLevel : MonoBehaviour
 			//Para capa
 			if(random == 61)
 			{
-				
+				Debug.Log("Puedo desplegar capa");
 			}
 		}
 	}
