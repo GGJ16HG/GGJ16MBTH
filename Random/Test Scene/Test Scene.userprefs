@@ -1,0 +1,15 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ControlLevel.cs">
+    <Files>
+      <File FileName="Assets/Scripts/ControlLevel.cs" Line="499" Column="18" />
+      <File FileName="Assets/Scripts/DestroyItem.cs" Line="35" Column="39" />
+      <File FileName="Assets/Scripts/ControlPosicion.cs" Line="16" Column="3" />
+      <File FileName="Assets/Scripts/ItemPosition.cs" Line="11" Column="22" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
