@@ -203,25 +203,22 @@ public class ControlLevel : MonoBehaviour
 	//Item pollo
 	public GameObject pollo;
 	public GameObject[] posicionesPollo;
-	public int maxPolloVariable = 1;
 	public int maxPolloFijo = 1;
+	public int maxPollo = 2;
 
 	//Item Bota
 	public GameObject bota;
 	public GameObject[] posicionesBota;
-	public int maxBotaVariable = 1;
 	public int maxBotaFijo = 2;
+	public int maxBota = 4;
 
 	//Item vial
 	public GameObject vial;
 	public GameObject[] posicionesVial;
-	public int maxVialVariable = 1;
 	public int maxVialFijo = 1;
+	public int maxVial = 2;
 
 	//Contadores
-	private int polloFijo = 0;
-	private int botaFijo = 0;
-	private int vialFijo = 0;
 	private int polloVariable = 0;
 	private int botaVariable = 0;
 	private int vialVariable = 0;
@@ -230,8 +227,79 @@ public class ControlLevel : MonoBehaviour
 	void posicionarItemsPotenciadores()
 	{
 		int contador = 0;
+		int referencia = 0;
 		//Item pollo
-		if(pollo != null && posicionesPollo.Length>0)
+		if(pollo != null && posicionesPollo.Length > 0) 
+		{
+			if(posicionesPollo.Length < maxPollo) 
+			{
+				referencia = posicionesPollo.Length;
+			} 
+			else 
+			{
+				referencia = maxPollo;
+			}
+
+			while(contador < referencia)
+			{
+				if(posicionesPollo [contador] != null) 
+				{
+					Instantiate(pollo,posicionesPollo[contador].transform.position, Quaternion.identity);
+					polloVariable++;
+				}
+				contador++;
+			}
+		}	
+
+		contador = 0;
+		//Item bota
+		if(bota != null && posicionesBota.Length > 0) 
+		{
+			if(posicionesBota.Length < maxBota) 
+			{
+				referencia = posicionesBota.Length;
+			} 
+			else 
+			{
+				referencia = maxBota;
+			}
+
+			while(contador < referencia)
+			{
+				if(posicionesBota[contador] != null) 
+				{
+					Instantiate(bota,posicionesBota[contador].transform.position, Quaternion.identity);
+					botaVariable++;
+				}
+				contador++;
+			}
+		}
+
+		contador = 0;
+		//Item vial
+		if(vial != null && posicionesVial.Length > 0) 
+		{
+			if(posicionesVial.Length < maxVial) 
+			{
+				referencia = posicionesVial.Length;
+			} 
+			else 
+			{
+				referencia = maxVial;
+			}
+
+			while(contador < referencia)
+			{
+				if(posicionesVial[contador] != null) 
+				{
+					Instantiate(vial,posicionesVial[contador].transform.position, Quaternion.identity);
+					vialVariable++;
+				}
+				contador++;
+			}
+		}
+
+		/*if(pollo != null && posicionesPollo.Length>0)
 		{
 			while(contador < posicionesPollo.Length && polloFijo < maxPolloFijo)
 			{
@@ -273,7 +341,7 @@ public class ControlLevel : MonoBehaviour
 				}
 				contador++;
 			}
-		}
+		}*/
 	}
 		
 	// Use this for initialization
@@ -300,10 +368,22 @@ public class ControlLevel : MonoBehaviour
 		{
 			int random = Random.Range(0,100);
 
-			//Para capa
-			if(random == 61)
+			//Se revisan probabilidades
+			if(random >= 0 && random <5)
 			{
-				Debug.Log("Puedo desplegar capa");
+				//Pocion
+			}
+			if(random >= 25 && random <30)
+			{
+				//Pollo
+			}
+			if(random >= 75 && random <85)
+			{
+				//Bota
+			}
+			if(random == 99)
+			{
+				//Capa
 			}
 		}
 	}
