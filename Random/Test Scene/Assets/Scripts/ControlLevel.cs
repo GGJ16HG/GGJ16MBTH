@@ -33,7 +33,6 @@ public class ControlLevel : MonoBehaviour
 		//Item agua bendita
 		if(aguaBendita != null && posicionesAguaBendita.Length>0)
 		{
-			Debug.Log("Valor no nulo y con valores");
 			if(posicionesAguaBendita.Length == 1) 
 			{
 				if(posicionesAguaBendita[0] != null)
@@ -74,7 +73,6 @@ public class ControlLevel : MonoBehaviour
 		//Item biblia
 		if(biblia != null && posicionesBiblia.Length>0)
 		{
-			Debug.Log("Valor no nulo y con valores");
 			if(posicionesBiblia.Length == 1) 
 			{
 				if(posicionesBiblia[0] != null)
@@ -115,7 +113,6 @@ public class ControlLevel : MonoBehaviour
 		//Item cruz
 		if(cruz != null && posicionesCruz.Length>0)
 		{
-			Debug.Log("Valor no nulo y con valores");
 			if(posicionesCruz.Length == 1) 
 			{
 				if(posicionesCruz[0] != null)
@@ -156,7 +153,6 @@ public class ControlLevel : MonoBehaviour
 		//Item rosario
 		if(rosario != null && posicionesRosario.Length>0)
 		{
-			Debug.Log("Valor no nulo y con valores");
 			if(posicionesCruz.Length == 1) 
 			{
 				if(posicionesCruz[0] != null)
@@ -204,30 +200,89 @@ public class ControlLevel : MonoBehaviour
 	 * - Vial
 	 */
 
-	//Item capa
-	public GameObject capa;
-	public GameObject[] posicionesCapa;
-	public int maxCapa;
-
 	//Item pollo
 	public GameObject pollo;
 	public GameObject[] posicionesPollo;
-	public int maxPollo;
+	public int maxPolloFijo = 1;
 
 	//Item pluma
 	public GameObject pluma;
 	public GameObject[] posicionesPluma;
-	public int maxPluma;
+	public int maxPlumaFijo = 2;
 
 	//Item vial
 	public GameObject vial;
 	public GameObject[] posicionesVial;
-	public int maxVial;
+	public int maxVialFijo = 1;
+
+	//Contadores
+	private int polloFijo = 0;
+	private int plumaFijo = 0;
+	private int vialFijo = 0;
+	private int polloVariable = 0;
+	private int plumaVariable = 0;
+	private int vialVariable = 0;
+	private int capaVariable = 0;
+
+	void posicionarItemsPotenciadores()
+	{
+		int contador = 0;
+		//Item pollo
+		if(pollo != null && posicionesPollo.Length>0)
+		{
+			while(contador < posicionesPollo.Length && polloFijo < maxPolloFijo)
+			{
+				if(posicionesPollo[contador] != null)
+				{
+					Instantiate(pollo,posicionesPollo[contador].transform.position, Quaternion.identity);
+					polloFijo++;
+				}
+				contador++;
+			}
+
+		}
+
+		contador = 0;
+		//Item pluma
+		if(pluma != null && posicionesPluma.Length>0)
+		{
+			while(contador < posicionesPluma.Length && plumaFijo < maxPlumaFijo)
+			{
+				if(posicionesPluma[contador] != null)
+				{
+					Instantiate(pluma,posicionesPluma[contador].transform.position, Quaternion.identity);
+					plumaFijo++;
+				}
+				contador++;
+			}
+		}
+
+		contador = 0;
+		//Item vial
+		if(vial != null && posicionesVial.Length>0)
+		{
+			while(contador < posicionesVial.Length && vialFijo < maxVialFijo)
+			{
+				if(posicionesVial[contador] != null)
+				{
+					Instantiate(vial,posicionesVial[contador].transform.position, Quaternion.identity);
+					vialFijo++;
+				}
+				contador++;
+			}
+		}
+	}
+
+	//Item capa
+	public GameObject capa;
+	public GameObject[] posicionesCapa;
+	public int maxCapaVariable = 1;
 
 	// Use this for initialization
 	void Start () 
 	{
 		posicionarItemsRitual();
+		posicionarItemsPotenciadores();
 	}
 	
 	// Update is called once per frame
