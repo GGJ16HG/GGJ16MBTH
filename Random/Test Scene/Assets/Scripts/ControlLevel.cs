@@ -298,50 +298,6 @@ public class ControlLevel : MonoBehaviour
 				contador++;
 			}
 		}
-
-		/*if(pollo != null && posicionesPollo.Length>0)
-		{
-			while(contador < posicionesPollo.Length && polloFijo < maxPolloFijo)
-			{
-				if(posicionesPollo[contador] != null)
-				{
-					Instantiate(pollo,posicionesPollo[contador].transform.position, Quaternion.identity);
-					polloFijo++;
-				}
-				contador++;
-			}
-
-		}
-
-		contador = 0;
-		//Item bota
-		if(bota != null && posicionesBota.Length>0)
-		{
-			while(contador < posicionesBota.Length && botaFijo < maxBotaFijo)
-			{
-				if(posicionesBota[contador] != null)
-				{
-					Instantiate(bota,posicionesBota[contador].transform.position, Quaternion.identity);
-					botaFijo++;
-				}
-				contador++;
-			}
-		}
-
-		contador = 0;
-		//Item vial
-		if(vial != null && posicionesVial.Length>0)
-		{
-			while(contador < posicionesVial.Length && vialFijo < maxVialFijo)
-			{
-				if(posicionesVial[contador] != null)
-				{
-					Instantiate(vial,posicionesVial[contador].transform.position, Quaternion.identity);
-					vialFijo++;
-				}
-				contador++;
-			}
-		}*/
 	}
 		
 	// Use this for initialization
