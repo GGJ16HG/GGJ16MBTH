@@ -231,18 +231,18 @@ public class ControlLevel : MonoBehaviour
 		//Item pollo
 		if(pollo != null && posicionesPollo.Length > 0) 
 		{
-			if(posicionesPollo.Length < maxPollo) 
+			if(posicionesPollo.Length < maxPolloFijo) 
 			{
 				referencia = posicionesPollo.Length;
 			} 
 			else 
 			{
-				referencia = maxPollo;
+				referencia = maxPolloFijo;
 			}
 
 			while(contador < referencia)
 			{
-				if(posicionesPollo [contador] != null) 
+				if(posicionesPollo[contador] != null) 
 				{
 					Instantiate(pollo,posicionesPollo[contador].transform.position, Quaternion.identity);
 					polloVariable++;
@@ -255,13 +255,13 @@ public class ControlLevel : MonoBehaviour
 		//Item bota
 		if(bota != null && posicionesBota.Length > 0) 
 		{
-			if(posicionesBota.Length < maxBota) 
+			if(posicionesBota.Length < maxBotaFijo) 
 			{
 				referencia = posicionesBota.Length;
 			} 
 			else 
 			{
-				referencia = maxBota;
+				referencia = maxBotaFijo;
 			}
 
 			while(contador < referencia)
@@ -279,13 +279,13 @@ public class ControlLevel : MonoBehaviour
 		//Item vial
 		if(vial != null && posicionesVial.Length > 0) 
 		{
-			if(posicionesVial.Length < maxVial) 
+			if(posicionesVial.Length < maxVialFijo) 
 			{
 				referencia = posicionesVial.Length;
 			} 
 			else 
 			{
-				referencia = maxVial;
+				referencia = maxVialFijo;
 			}
 
 			while(contador < referencia)
@@ -334,6 +334,9 @@ public class ControlLevel : MonoBehaviour
 			{
 				//Pocion
 				//vialVariable = 0;
+				if(this.vialVariable < this.maxVial)
+				{
+				}
 			}
 			if(random >= 25 && random <30)
 			{

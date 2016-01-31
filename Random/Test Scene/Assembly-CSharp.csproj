@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\ControlLevel.cs" />
+     <Compile Include="Assets\Scripts\ControlPosicion.cs" />
      <Compile Include="Assets\Scripts\DestroyItem.cs" />
      <Compile Include="Assets\Scripts\TestMove.cs" />
  <Reference Include="UnityEngine.UI">
