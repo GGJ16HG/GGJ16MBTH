@@ -272,22 +272,44 @@ public class ControlLevel : MonoBehaviour
 			}
 		}
 	}
-
-	//Item capa
-	public GameObject capa;
-	public GameObject[] posicionesCapa;
-	public int maxCapaVariable = 1;
-
+		
 	// Use this for initialization
 	void Start () 
 	{
 		posicionarItemsRitual();
 		posicionarItemsPotenciadores();
 	}
+
+	//Item capa
+	public GameObject capa;
+	public GameObject[] posicionesCapa;
+	public int maxCapaVariable = 1;
+
+	//Items con aparte elementos variables
+	public int maxPolloVariable = 1;
+	public int maxPlumaVariable = 1;
+	public int maxVialVariable = 1;
+
+	//Contador de tiempo
+	private int tiempoBase;
 	
 	// Update is called once per frame
-	void Update () 
+	void Update() 
 	{
-	
+		tiempoBase = (int)Time.time;
+
+		Debug.Log("Lalala: " + tiempoBase);
+
+		if(tiempoBase % 10 == 0)
+		{
+			Debug.Log("Divisible entre 10");
+			int random = Random.Range(0,100);
+
+			//Para capa
+			if(random == 61)
+			{
+				
+			}
+		}
 	}
 }
