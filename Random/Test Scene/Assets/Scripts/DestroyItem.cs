@@ -37,6 +37,7 @@ public class DestroyItem : MonoBehaviour
 				Debug.Log("Esto es una capa");
 				levelManager.GetComponent<ControlLevel>().disminuyeCapa();
 			}
+			levelManager.GetComponent<ControlLevel>().liberaEspacio(gameObject.tag, gameObject.GetComponent<ItemPosition>().getPosition());
 			Destroy(gameObject);
 		}
 

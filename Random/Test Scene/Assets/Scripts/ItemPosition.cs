@@ -4,14 +4,14 @@ using System.Collections;
 public class ItemPosition : MonoBehaviour 
 {
 
-	private int position = -1;
+	private int position;
 
-	public void setOcupado(int position)
+	public void setPosition(int pos)
 	{
-		this.position = position;
+		this.position = pos;
 	}
 
-	public int getOcupado()
+	public int getPosition()
 	{
 		return this.position;
 	}

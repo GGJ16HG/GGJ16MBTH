@@ -39,6 +39,7 @@ public class ControlLevel : MonoBehaviour
 				{
 					Instantiate(aguaBendita,posicionesAguaBendita[0].transform.position, Quaternion.identity);
 					posicionesAguaBendita[0].GetComponent<ControlPosicion>().setOcupado(true);
+					aguaBendita.GetComponent<ItemPosition>().setPosition(0);
 				}
 			} 
 			else 
@@ -65,6 +66,7 @@ public class ControlLevel : MonoBehaviour
 						{
 							Instantiate(aguaBendita,posicionesAguaBendita[random].transform.position, Quaternion.identity);
 							posicionesAguaBendita[random].GetComponent<ControlPosicion>().setOcupado(true);
+							aguaBendita.GetComponent<ItemPosition>().setPosition(random);
 							existe = true;
 						}
 					}
@@ -81,6 +83,7 @@ public class ControlLevel : MonoBehaviour
 				{
 					Instantiate(biblia,posicionesBiblia[0].transform.position, Quaternion.identity);
 					posicionesBiblia[0].GetComponent<ControlPosicion>().setOcupado(true);
+					biblia.GetComponent<ItemPosition>().setPosition(0);
 				}
 			} 
 			else 
@@ -107,6 +110,7 @@ public class ControlLevel : MonoBehaviour
 						{
 							Instantiate(biblia,posicionesBiblia[random].transform.position, Quaternion.identity);
 							posicionesBiblia[random].GetComponent<ControlPosicion>().setOcupado(true);
+							biblia.GetComponent<ItemPosition>().setPosition(random);
 							existe = true;
 						}
 					}
@@ -123,6 +127,7 @@ public class ControlLevel : MonoBehaviour
 				{
 					Instantiate(cruz,posicionesCruz[0].transform.position, Quaternion.identity);
 					posicionesCruz[0].GetComponent<ControlPosicion>().setOcupado(true);
+					cruz.GetComponent<ItemPosition>().setPosition(0);
 				}
 			} 
 			else 
@@ -149,6 +154,7 @@ public class ControlLevel : MonoBehaviour
 						{
 							Instantiate(cruz,posicionesCruz[random].transform.position, Quaternion.identity);
 							posicionesCruz[random].GetComponent<ControlPosicion>().setOcupado(true);
+							cruz.GetComponent<ItemPosition>().setPosition(random);
 							existe = true;
 						}
 					}
@@ -165,6 +171,7 @@ public class ControlLevel : MonoBehaviour
 				{
 					Instantiate(rosario,posicionesRosario[0].transform.position, Quaternion.identity);
 					posicionesRosario[0].GetComponent<ControlPosicion>().setOcupado(true);
+					rosario.GetComponent<ItemPosition>().setPosition(0);
 				}
 			} 
 			else 
@@ -191,6 +198,7 @@ public class ControlLevel : MonoBehaviour
 						{
 							Instantiate(rosario,posicionesRosario[random].transform.position, Quaternion.identity);
 							posicionesRosario[random].GetComponent<ControlPosicion>().setOcupado(true);
+							rosario.GetComponent<ItemPosition>().setPosition(random);
 							existe = true;
 						}
 					}
@@ -254,6 +262,7 @@ public class ControlLevel : MonoBehaviour
 				{
 					Instantiate(pollo,posicionesPollo[contador].transform.position, Quaternion.identity);
 					posicionesPollo[contador].GetComponent<ControlPosicion>().setOcupado(true);
+					pollo.GetComponent<ItemPosition>().setPosition(contador);
 					polloVariable++;
 				}
 				contador++;
@@ -279,6 +288,7 @@ public class ControlLevel : MonoBehaviour
 				{
 					Instantiate(bota,posicionesBota[contador].transform.position, Quaternion.identity);
 					posicionesBota[contador].GetComponent<ControlPosicion>().setOcupado(true);
+					bota.GetComponent<ItemPosition>().setPosition(contador);
 					botaVariable++;
 				}
 				contador++;
@@ -304,6 +314,7 @@ public class ControlLevel : MonoBehaviour
 				{
 					Instantiate(vial,posicionesVial[contador].transform.position, Quaternion.identity);
 					posicionesVial[contador].GetComponent<ControlPosicion>().setOcupado(true);
+					vial.GetComponent<ItemPosition>().setPosition(contador);
 					vialVariable++;
 				}
 				contador++;
@@ -354,6 +365,11 @@ public class ControlLevel : MonoBehaviour
 						if (!posicionesVial [i].GetComponent<ControlPosicion> ().getOcupado ()) 
 						{
 							Debug.Log ("Puede Ser Ocupado");
+							Instantiate(vial,posicionesVial[i].transform.position, Quaternion.identity);
+							posicionesVial[i].GetComponent<ControlPosicion>().setOcupado(true);
+							vial.GetComponent<ItemPosition>().setPosition(i);
+							vialVariable++;
+							break;
 						} 
 						else 
 						{
@@ -375,6 +391,11 @@ public class ControlLevel : MonoBehaviour
 						if(!posicionesPollo[i].GetComponent<ControlPosicion>().getOcupado())
 						{
 							Debug.Log("Puede Ser Ocupado");
+							Instantiate(pollo,posicionesPollo[i].transform.position, Quaternion.identity);
+							posicionesPollo[i].GetComponent<ControlPosicion>().setOcupado(true);
+							pollo.GetComponent<ItemPosition>().setPosition(i);
+							polloVariable++;
+							break;
 						}
 						else 
 						{
@@ -396,6 +417,11 @@ public class ControlLevel : MonoBehaviour
 						if(!posicionesBota[i].GetComponent<ControlPosicion>().getOcupado())
 						{
 							Debug.Log("Puede Ser Ocupado");
+							Instantiate(bota,posicionesBota[i].transform.position, Quaternion.identity);
+							posicionesBota[i].GetComponent<ControlPosicion>().setOcupado(true);
+							bota.GetComponent<ItemPosition>().setPosition(i);
+							botaVariable++;
+							break;
 						}
 						else 
 						{
@@ -417,6 +443,11 @@ public class ControlLevel : MonoBehaviour
 						if(!posicionesCapa[i].GetComponent<ControlPosicion>().getOcupado())
 						{
 							Debug.Log("Puede Ser Ocupado");
+							Instantiate(capa,posicionesCapa[i].transform.position, Quaternion.identity);
+							posicionesCapa[i].GetComponent<ControlPosicion>().setOcupado(true);
+							capa.GetComponent<ItemPosition>().setPosition(i);
+							capaVariable++;
+							break;
 						}
 						else 
 						{
@@ -450,5 +481,26 @@ public class ControlLevel : MonoBehaviour
 	{
 		Debug.Log("Disminute capa "+capaVariable);
 		capaVariable = capaVariable - 1;
+	}
+
+	public void liberaEspacio(string tag, int pos)
+	{
+		Debug.Log("Revisamos; "+tag+ " "+pos);
+		if(tag.Equals ("Pollo")) 
+		{
+			posicionesPollo[pos].GetComponent<ControlPosicion>().setOcupado(false);
+		}
+		else if(tag.Equals ("Bota")) 
+		{
+			posicionesBota[pos].GetComponent<ControlPosicion>().setOcupado(false);
+		}
+		else if(tag.Equals ("Vial")) 
+		{
+			posicionesVial[pos].GetComponent<ControlPosicion>().setOcupado(false);
+		}
+		else if(tag.Equals ("Capa")) 
+		{
+			posicionesCapa[pos].GetComponent<ControlPosicion>().setOcupado(false);
+		}
 	}
 }
