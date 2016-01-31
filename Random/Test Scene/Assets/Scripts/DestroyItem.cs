@@ -8,16 +8,16 @@ public class DestroyItem : MonoBehaviour
 	void Start ()
 	{
 		levelManager = GameObject.FindGameObjectWithTag("LevelManager");
-		Debug.Log("Destroy");
 	}
 
 	void OnTriggerEnter(Collider objetoColision)
 	{
-		
-	}
+		//Destrucción del objeto
+		if(objetoColision.gameObject.CompareTag("Player")) 
+		{
+			Debug.Log("Jugador");
+			Destroy(gameObject);
+		}
 
-	void OnCollisionEnter(Collision collision)
-	{
-		Debug.Log("Objeto");
 	}
 }

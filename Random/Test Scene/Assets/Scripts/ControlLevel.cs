@@ -298,11 +298,8 @@ public class ControlLevel : MonoBehaviour
 	{
 		tiempoBase = (int)Time.time;
 
-		Debug.Log("Lalala: " + tiempoBase);
-
 		if(tiempoBase % 10 == 0)
 		{
-			Debug.Log("Divisible entre 10");
 			int random = Random.Range(0,100);
 
 			//Para capa
