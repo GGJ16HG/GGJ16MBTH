@@ -8,12 +8,12 @@
 - implementación P1 -> Listo
 - Grabación de sonidos -> listo
 - AI del fantasma -> Listo
+- Implementación de texturas -> Completo
 - Implmentación y animación de sprites del fantasma -> en proceso
-- Implementación de texturas -> en proceso
 - Implementación fantasma -> en proceso
 - Implementación del mapa -> en proceso
 - Pruebas de colisiones -> en proceso
 - Implementación de gameplay -> en proceso
 - Implementación de sonidos -> Pendiente
 - Codificación de los artefactos -> pendiente
-- Implementación de los artefactos
+- Implementación de los artefactos -> pendiente
