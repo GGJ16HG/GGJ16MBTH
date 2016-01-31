@@ -282,7 +282,7 @@ public class ControlLevel : MonoBehaviour
 	void Start () 
 	{
 		posicionarItemsRitual();
-		posicionarItemsPotenciadores();
+		//posicionarItemsPotenciadores();
 	}
 	
 	// Update is called once per frame
