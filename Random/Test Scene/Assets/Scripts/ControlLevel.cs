@@ -351,6 +351,14 @@ public class ControlLevel : MonoBehaviour
 
 					for(int i = 0; i < posicionesVial.Length; i++) 
 					{
+						if (!posicionesVial [i].GetComponent<ControlPosicion> ().getOcupado ()) 
+						{
+							Debug.Log ("Puede Ser Ocupado");
+						} 
+						else 
+						{
+							Debug.Log ("NO!!! Ser Ocupado");
+						}
 					}
 				}
 			}
@@ -364,6 +372,14 @@ public class ControlLevel : MonoBehaviour
 
 					for(int i = 0; i < posicionesPollo.Length; i++) 
 					{
+						if(!posicionesPollo[i].GetComponent<ControlPosicion>().getOcupado())
+						{
+							Debug.Log("Puede Ser Ocupado");
+						}
+						else 
+						{
+							Debug.Log ("NO!!! Ser Ocupado");
+						}
 					}
 				}
 			}
@@ -377,6 +393,14 @@ public class ControlLevel : MonoBehaviour
 
 					for(int i = 0; i < posicionesBota.Length; i++) 
 					{
+						if(!posicionesBota[i].GetComponent<ControlPosicion>().getOcupado())
+						{
+							Debug.Log("Puede Ser Ocupado");
+						}
+						else 
+						{
+							Debug.Log ("NO!!! Ser Ocupado");
+						}
 					}
 				}
 			}
@@ -390,6 +414,14 @@ public class ControlLevel : MonoBehaviour
 
 					for(int i = 0; i < posicionesCapa.Length; i++) 
 					{
+						if(!posicionesCapa[i].GetComponent<ControlPosicion>().getOcupado())
+						{
+							Debug.Log("Puede Ser Ocupado");
+						}
+						else 
+						{
+							Debug.Log ("NO!!! Ser Ocupado");
+						}
 					}
 				}
 			}
