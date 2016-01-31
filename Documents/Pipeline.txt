@@ -8,6 +8,7 @@
 - implementación P1 -> Listo
 - Grabación de sonidos -> listo
 - AI del fantasma -> Listo
+<<<<<<< HEAD
 - Implementación de texturas -> Completo
 - Implmentación y animación de sprites del fantasma -> en proceso
 - Implementación fantasma -> en proceso
@@ -17,3 +18,14 @@
 - Implementación de sonidos -> Pendiente
 - Codificación de los artefactos -> pendiente
 - Implementación de los artefactos -> pendiente
+=======
+- Implmentación y animación de sprites del fantasma -> en proceso [65%]
+- Implementación de texturas -> en proceso [%80]
+- Implementación fantasma -> en proceso [%70]
+- Implementación del mapa -> en proceso [%80]
+- Pruebas de colisiones -> en proceso [%50]
+- Implementación de gameplay -> en proceso [%40]
+- Implementación de sonidos -> Pendiente 
+- Codificación de los artefactos -> Proceso [%70]
+- Implementación de los artefactos -> Pendiente
+>>>>>>> origin/Documents
